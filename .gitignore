@@ -1,0 +1,13 @@
+# Sistema Operacional & WSL
+.DS_Store
+Thumbs.db
+*:Zone.Identifier
+*.Zone.Identifier
+
+# Logs & Servidores Locais
+*.log
+server.log
+tunnel.log
+
+# Vercel
+.vercel

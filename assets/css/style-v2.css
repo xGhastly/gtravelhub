@@ -1,0 +1,291 @@
+/* ==========================================================================
+   GTRAVEL HUB - Folha de Estilos V2 (Melhorias de UI/UX & Acessibilidade)
+   Mantém compatibilidade com style.css original e aplica as diretrizes de UX
+   ========================================================================== */
+
+/* 1. Ajustes de Contraste e Acessibilidade (WCAG 2.1 AA) */
+:root {
+  --color-text-muted-v2: #a2a9c4; /* Mais legível que o anterior #8e95ae */
+  --color-gold-text: #ebd098;     /* Dourado ligeiramente clareado para texto */
+}
+
+/* Foco Visível para Navegação por Teclado */
+button:focus-visible, 
+a:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible {
+  outline: 2px solid var(--color-gold) !important;
+  outline-offset: 3px !important;
+}
+
+/* 2. Ícones Vetoriais SVG em Serviços e Diferenciais (Substituindo Emojis) */
+.service-icon-box {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: var(--radius-md) !important;
+  background: rgba(222, 192, 127, 0.08) !important;
+  border: 1px solid var(--color-gold-border) !important;
+  margin-bottom: 20px !important;
+  transition: var(--transition-smooth);
+}
+
+.service-icon-box svg {
+  width: 28px;
+  height: 28px;
+  stroke: var(--color-gold);
+  stroke-width: 1.8;
+  fill: none;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon-box {
+  background: rgba(222, 192, 127, 0.16) !important;
+  border-color: var(--color-gold) !important;
+  box-shadow: 0 0 20px rgba(222, 192, 127, 0.25);
+}
+
+.service-card:hover .service-icon-box svg {
+  transform: scale(1.1);
+}
+
+.why-item-icon {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: var(--radius-md) !important;
+  background: rgba(222, 192, 127, 0.08) !important;
+  border: 1px solid var(--color-gold-border) !important;
+  flex-shrink: 0;
+}
+
+.why-item-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--color-gold);
+  stroke-width: 1.8;
+  fill: none;
+}
+
+/* 3. Hierarquia Limpa nos Cards das 3 Linhas (Fim da competição de botões) */
+.line-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.line-secondary-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: var(--color-gold-text);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.line-secondary-link svg {
+  transition: transform 0.2s ease;
+}
+
+.line-secondary-link:hover {
+  color: var(--color-white);
+}
+
+.line-secondary-link:hover svg {
+  transform: translateX(4px);
+}
+
+/* 4. Barra de Estatísticas de Impacto (Social Proof Counter) */
+.stats-section {
+  padding: 40px 0 60px;
+  position: relative;
+}
+
+.stats-counter-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background: rgba(24, 28, 53, 0.65);
+  border: 1px solid var(--color-gold-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius-lg);
+  padding: 35px 25px;
+  box-shadow: var(--shadow-card);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--color-gold-border), transparent);
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1.1;
+  margin-bottom: 6px;
+  text-shadow: 0 0 25px rgba(222, 192, 127, 0.3);
+}
+
+.stat-label {
+  font-size: 0.88rem;
+  color: var(--color-text-body);
+  font-weight: 500;
+}
+
+/* 5. Simulador Inteligente: Campo de Telefone e Pills Rápidas de Data */
+.date-quick-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.date-pill {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(222, 192, 127, 0.25);
+  color: var(--color-text-muted-v2);
+  font-size: 0.76rem;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+.date-pill:hover {
+  background: rgba(222, 192, 127, 0.15);
+  color: var(--color-gold-light);
+  border-color: var(--color-gold);
+}
+
+.date-pill.active {
+  background: var(--color-gold);
+  color: var(--color-primary-dark);
+  border-color: var(--color-gold);
+  font-weight: 600;
+}
+
+.form-badge-security {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #6ee7b7;
+  background: rgba(16, 185, 129, 0.1);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  margin-top: 6px;
+}
+
+/* 6. Acessibilidade Semântica no Acordeão (FAQ) */
+button.faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-white);
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  transition: var(--transition-smooth);
+}
+
+button.faq-question:hover {
+  color: var(--color-gold);
+}
+
+.faq-icon-svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--color-gold);
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon-svg {
+  transform: rotate(180deg);
+}
+
+/* 7. Ergonomia Mobile para Filtros de Destino */
+@media (max-width: 768px) {
+  .destination-filters {
+    display: flex !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding-bottom: 10px !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .destination-filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-btn {
+    flex-shrink: 0 !important;
+    padding: 10px 18px !important;
+    font-size: 0.85rem !important;
+  }
+
+  .stats-counter-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+    padding: 25px 15px !important;
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .stat-number {
+    font-size: 1.9rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-counter-bar {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* 8. Espaçamento Seguro no Rodapé para o Botão Flutuante de WhatsApp */
+.site-footer {
+  padding-bottom: 90px !important;
+}

@@ -1,0 +1,355 @@
+/* ==========================================================================
+   GTRAVEL HUB - Folha de Estilos V3 (Curadoria, Pacotes & Novo Posicionamento)
+   Compatível com style.css e style-v2.css
+   ========================================================================== */
+
+/* 1. Grid Responsivo para as 4 Coleções de Viagem */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .comparison-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 24px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .comparison-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+  }
+}
+
+/* Refinamento dos Cards de Coleção para 4 colunas */
+.line-card {
+  display: flex !important;
+  flex-direction: column !important;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease !important;
+}
+
+.line-card:hover {
+  transform: translateY(-8px) !important;
+  border-color: var(--color-gold) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(222, 192, 127, 0.15) !important;
+}
+
+.line-card .line-card-title {
+  font-size: 1.25rem !important;
+  margin-bottom: 8px !important;
+}
+
+.line-card .line-concept {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: 16px !important;
+}
+
+.line-features-list .feature-item {
+  font-size: 0.82rem !important;
+  margin-bottom: 10px !important;
+}
+
+/* ==========================================================================
+   Correção do Selo / Logo (Opção A) & Correção Suave do Zoom
+   ========================================================================== */
+.line-card-media {
+  position: relative !important;
+  height: 200px !important;
+  overflow: hidden !important;
+  background-color: var(--color-primary-dark) !important;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+  transform: translateZ(0) !important;
+  -webkit-mask-image: -webkit-radial-gradient(white, black) !important;
+}
+
+@media (min-width: 768px) {
+  .line-card-media {
+    height: 210px !important;
+  }
+}
+
+.line-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.5s ease-out !important;
+  will-change: transform !important;
+}
+
+.line-card:hover .line-card-img {
+  transform: scale(1.05) !important;
+}
+
+/* Overlay Escurecedor - Correção do Zoom e Faixa Brilhosa */
+.line-card-media-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: linear-gradient(180deg, rgba(17, 20, 39, 0.12) 0%, rgba(17, 20, 39, 0.45) 55%, rgba(17, 20, 39, 0.96) 100%) !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  transform: translateZ(0) !important;
+  transition: opacity 0.35s ease !important;
+}
+
+.line-card:hover .line-card-media-overlay {
+  opacity: 0.98 !important;
+}
+
+/* Selo Inteiro Flutuante no Topo da Imagem (Opção A - Sem Cortes) */
+.seal-badge-floating {
+  position: absolute !important;
+  top: 14px !important;
+  left: 14px !important;
+  bottom: auto !important;
+  right: auto !important;
+  transform: none !important;
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: var(--radius-full) !important;
+  background: rgba(17, 20, 39, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1.5px solid var(--color-gold) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), 0 0 10px rgba(222, 192, 127, 0.25) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 6px !important;
+  z-index: 4 !important;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.line-card:hover .seal-badge-floating {
+  transform: scale(1.05) !important;
+  border-color: var(--color-gold-light) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6), 0 0 15px rgba(222, 192, 127, 0.4) !important;
+}
+
+.seal-badge-floating img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+
+/* Ajuste do Corpo do Card (Equilibrado e Sem Espaço Ocioso) */
+.line-card-body {
+  padding: 24px 20px 24px !important;
+}
+
+/* Badge Flutuante na Seção Por Que Escolher */
+.why-floating-badge img {
+  width: 44px !important;
+  height: 44px !important;
+  object-fit: contain !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid rgba(222, 192, 127, 0.35) !important;
+  background: var(--color-primary-dark) !important;
+}
+
+.section-closing-quote {
+  text-align: center;
+  margin-top: 45px;
+  padding: 20px 25px;
+  background: rgba(222, 192, 127, 0.05);
+  border: 1px solid var(--color-gold-border);
+  border-radius: var(--radius-md);
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-closing-quote p {
+  font-family: var(--font-display);
+  color: var(--color-gold-light);
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* 2. Seção Serviços - Alinhamento dos 6 Cards */
+.services-footer-note {
+  text-align: center;
+  max-width: 780px;
+  margin: 35px auto 0;
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  background: rgba(17, 20, 39, 0.6);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(222, 192, 127, 0.25);
+}
+
+/* 3. Seção Nossa Essência (Storytelling Editorial) */
+.about-story-text p {
+  color: var(--color-text-body);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+
+.about-highlight-box {
+  background: linear-gradient(135deg, rgba(222, 192, 127, 0.12) 0%, rgba(17, 20, 39, 0.8) 100%);
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.about-highlight-box p {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--color-white);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-signature-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-gold-border);
+}
+
+.founder-signature-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  letter-spacing: 0.5px;
+}
+
+.founder-signature-role {
+  font-size: 0.85rem;
+  color: var(--color-text-muted-v2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Enquadramento otimizado para a foto oficial da fundadora */
+.about-photo {
+  object-fit: cover !important;
+  object-position: center 15% !important;
+}
+
+.cta-circle-avatar {
+  object-fit: cover !important;
+  object-position: center 15% !important;
+}
+
+/* 4. Novo Formulário Interativo & Qualificador */
+.investment-pill-group,
+.service-pill-group,
+.date-pill-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.choice-chip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(222, 192, 127, 0.22);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  color: var(--color-text-body);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+  line-height: 1.3;
+}
+
+.choice-chip:hover {
+  border-color: var(--color-gold);
+  background: rgba(222, 192, 127, 0.08);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.choice-chip.active {
+  background: linear-gradient(135deg, rgba(222, 192, 127, 0.25) 0%, rgba(197, 160, 89, 0.35) 100%);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+  font-weight: 600;
+  box-shadow: 0 0 16px rgba(222, 192, 127, 0.2);
+}
+
+.choice-chip input[type="radio"],
+.choice-chip input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-group-section-title {
+  grid-column: 1 / -1;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(222, 192, 127, 0.15);
+}
+
+.form-group-section-title h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--color-gold);
+  margin: 0 0 4px;
+  letter-spacing: 0.5px;
+}
+
+.form-group-section-title p {
+  font-size: 0.84rem;
+  color: var(--color-text-muted-v2);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.form-footer-guarantee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted-v2);
+}
+
+.form-footer-guarantee span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Badge Destaque Ceará / Estratégico */
+.ceara-highlight-badge {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35) !important;
+}
+
+/* Botão Explorar Experiência nos Destinos */
+.destination-cta-link {
+  font-weight: 600 !important;
+  letter-spacing: 0.3px !important;
+}
+
+/* Grid Harmônico para os 8 Destinos Selecionados (4 colunas no Desktop) */
+@media (min-width: 1200px) {
+  .destinations-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 20px !important;
+  }
+}

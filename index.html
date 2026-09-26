@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTRAVEL HUB | Curadoria de Viagens | O Mundo Mais Perto de Você</title>
+  <meta name="description" content="Selecionamos destinos, hospedagens, experiências e roteiros para tornar sua viagem mais especial, seja através de pacotes cuidadosamente selecionados ou de uma experiência planejada sob medida para você.">
+  
+  <!-- Favicon com o Símbolo Oficial da Marca -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg">
+  <link rel="apple-touch-icon" href="assets/images/selo-destinos.png">
+
+  <!-- Fontes do Google: Cinzel (Serifa de Luxo) e Montserrat (Corpo Sofisticado) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folhas de Estilo Oficiais (Base + V2 + V3) -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style-v2.css">
+  <link rel="stylesheet" href="assets/css/style-v3.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & BARRA DE NAVEGAÇÃO ==================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container header-inner">
+      <!-- Marca / Logotipo -->
+      <a href="#inicio" class="header-brand" aria-label="GTRAVEL HUB Página Inicial">
+        <img src="assets/images/logo-gtravelhub-transparent.png" alt="GTRAVEL HUB - O mundo mais perto de você" class="header-logo-img">
+      </a>
+
+      <!-- Menu Principal Desktop -->
+      <nav class="site-nav" aria-label="Navegação Principal">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#colecoes" class="nav-link">Coleções de Viagem</a>
+        <a href="#servicos" class="nav-link">Serviços</a>
+        <a href="#destinos" class="nav-link">Destinos</a>
+        <a href="#diferenciais" class="nav-link">Por Que Nós</a>
+        <a href="#sobre" class="nav-link">Nossa Essência</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Ações do Header -->
+      <div class="header-actions">
+        <a href="#planejar" class="btn btn-gold header-cta-btn">
+          <span class="header-cta-text-full">Solicitar Consultoria</span>
+          <span class="header-cta-text-short">Consultoria</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+
+        <!-- Botão Menu Mobile (Hambúrguer) -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu de navegação">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenção do Menu Mobile Offcanvas -->
+  <div class="mobile-nav-wrapper" id="mobileDrawerWrapper">
+    <div class="mobile-backdrop" id="mobileBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-top">
+        <img src="assets/images/logo-gtravelhub-transparent.png" alt="GTRAVEL HUB" class="mobile-drawer-logo">
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar menu">&times;</button>
+      </div>
+      
+      <div class="mobile-nav-links">
+        <a href="#inicio" class="mobile-nav-link">Início</a>
+        <a href="#colecoes" class="mobile-nav-link">Coleções de Viagem</a>
+        <a href="#servicos" class="mobile-nav-link">Soluções para sua Viagem</a>
+        <a href="#destinos" class="mobile-nav-link">Destinos em Destaque</a>
+        <a href="#diferenciais" class="mobile-nav-link">Por Que a GTravel Hub</a>
+        <a href="#sobre" class="mobile-nav-link">Nossa Essência</a>
+        <a href="#planejar" class="mobile-nav-link">Planejar Viagem</a>
+        <a href="#faq" class="mobile-nav-link">Dúvidas Frequentes</a>
+      </div>
+
+      <div class="mobile-nav-footer">
+        <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20uma%20consultoria%20personalizada%20com%20a%20GTRAVEL%20HUB!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.071.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.419-.101.824z"/></svg>
+          <span>Falar no WhatsApp</span>
+        </a>
+        <div style="font-size: 0.8rem; color: var(--color-text-muted-v2); text-align: center; margin-top: 14px;">
+          Cadastur: 39481859000103
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== HERO PRINCIPAL ==================== -->
+  <section class="hero-section" id="inicio">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-pattern-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-tag">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 12 8"></polygon></svg>
+        <span>CURADORIA DE VIAGENS</span>
+      </div>
+
+      <h1 class="hero-title">
+        O mundo mais <span>perto de você.</span>
+      </h1>
+
+      <p class="hero-description">
+        Selecionamos destinos, hospedagens, experiências e roteiros para tornar sua viagem mais especial, seja através de pacotes cuidadosamente selecionados ou de uma experiência planejada sob medida para você.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#planejar" class="btn btn-gold">
+          <span>Solicitar Consultoria</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#colecoes" class="btn btn-outline-gold">
+          <span>Explorar Pacotes</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </a>
+      </div>
+
+      <!-- Barra de Diferenciais e Credenciais do Hero -->
+      <div class="hero-trust-bar">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="trust-text">
+            <strong>Cadastur Oficial</strong>
+            <span>Agência registrada no Cadastur</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </div>
+          <div class="trust-text">
+            <strong>Atendimento Humano</strong>
+            <span>Consultoria 1 a 1</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <div class="trust-text">
+            <strong>Pacotes Selecionados</strong>
+            <span>Viagens prontas para diferentes destinos</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <div class="trust-text">
+            <strong>Curadoria Sob Medida</strong>
+            <span>Experiências personalizadas para você</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SEÇÃO COLEÇÕES DE VIAGEM ==================== -->
+  <section class="lines-section" id="colecoes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">COLEÇÕES DE VIAGEM</span>
+        <h2 class="section-title">VIAGENS SELECIONADAS PARA CADA MOMENTO</h2>
+        <p class="section-subtitle">
+          Da praticidade de um pacote cuidadosamente selecionado às experiências especiais de Honeymoon, Babymoon e viagens sob medida, a GTravel Hub reúne destinos, hospedagens e experiências escolhidos para diferentes estilos, desejos e momentos da vida.
+        </p>
+      </div>
+
+      <!-- Grid Comparativo com as 4 Linhas -->
+      <div class="comparison-grid">
+
+        <!-- 1. PACOTES DE VIAGEM -->
+        <article class="line-card">
+          <div class="line-card-media">
+            <img src="assets/images/colecao-pacotes-viagem.jpg" alt="Pacotes de Viagem - Seleção GTravel Hub" class="line-card-img" loading="lazy" width="800" height="533">
+            <div class="line-card-media-overlay"></div>
+            <div class="seal-badge-floating" title="Selo Oficial Pacotes GTravel Hub">
+              <img src="assets/images/selo-pacotes.png" alt="Selo Pacotes">
+            </div>
+          </div>
+
+          <div class="line-card-body">
+            <span class="line-target-audience">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              Famílias, amigos & solo travelers
+            </span>
+
+            <h3 class="line-card-title">Pacotes de Viagem</h3>
+
+            <p class="line-concept">
+              Opções nacionais e internacionais cuidadosamente selecionadas para quem busca <strong>praticidade, segurança e uma viagem bem planejada</strong>.
+            </p>
+
+            <ul class="line-features-list">
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Roteiro Otimizado:</strong> Atrações icônicas e logística inteligente sem dor de cabeça.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Melhor Custo-Benefício:</strong> Tarifas selecionadas em aéreo, hotéis e passeios.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Suporte Completo:</strong> Acompanhamento integral antes e durante toda a sua estadia.</span>
+              </li>
+            </ul>
+
+            <div class="line-card-footer">
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20Pacotes%20de%20Viagem%20selecionados%20da%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width: 100%;">
+                <span>Explorar Pacotes</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#destinos" class="line-secondary-link">
+                <span>Ver destinos sugeridos</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. HONEYMOON -->
+        <article class="line-card featured">
+          <div class="card-ribbon">Celebração a Dois</div>
+          <div class="line-card-media">
+            <img src="https://images.unsplash.com/photo-1599325442714-822ad240956f?auto=format&fit=crop&w=800&q=80" alt="Casal celebrando lua de mel à beira-mar" class="line-card-img" loading="lazy" width="800" height="533">
+            <div class="line-card-media-overlay"></div>
+            <div class="seal-badge-floating" title="Selo Oficial Honeymoon GTravel Hub">
+              <img src="assets/images/selo-honeymoon.png" alt="Selo Honeymoon">
+            </div>
+          </div>
+
+          <div class="line-card-body">
+            <span class="line-target-audience">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              Casais & celebrações a dois
+            </span>
+
+            <h3 class="line-card-title">Honeymoon</h3>
+
+            <p class="line-concept">
+              Experiências pensadas para <strong>celebrar o amor</strong>, com hospedagens e momentos especiais cuidadosamente selecionados para tornar a viagem inesquecível.
+            </p>
+
+            <ul class="line-features-list">
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Hospedagens Românticas:</strong> Bangalôs sobre a água, suítes com piscina e vistas deslumbrantes.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Mimos & Upgrades:</strong> Jantares privativos na praia, champanhe e mimos nupciais.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Ritmo Slow Travel:</strong> Tempo livre para descansar, brindar e curtir a dois.</span>
+              </li>
+            </ul>
+
+            <div class="line-card-footer">
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20planejar%20minha%20Honeymoon%20(Lua%20de%20Mel)%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width: 100%;">
+                <span>Planejar Lua de Mel</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20quero%20falar%20com%20um%20especialista%20em%20Honeymoon%20da%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="line-secondary-link">
+                <span>Falar com especialista</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. BABYMOON -->
+        <article class="line-card">
+          <div class="line-card-media">
+            <img src="https://images.unsplash.com/photo-1687014963088-329aed14d5f8?auto=format&fit=crop&w=800&q=80" alt="Casal gestante vivenciando momentos de afeto e relaxamento à beira-mar" class="line-card-img" loading="lazy" width="800" height="533">
+            <div class="line-card-media-overlay"></div>
+            <div class="seal-badge-floating" title="Selo Oficial Babymoon GTravel Hub">
+              <img src="assets/images/selo-babymoon.png" alt="Selo Babymoon">
+            </div>
+          </div>
+
+          <div class="line-card-body">
+            <span class="line-target-audience">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"/></svg>
+              Casais grávidos & gestantes
+            </span>
+
+            <h3 class="line-card-title">Babymoon</h3>
+
+            <p class="line-concept">
+              A <strong>última viagem a dois antes da chegada do bebê</strong>, com destinos, hospedagens e experiências selecionados para proporcionar conforto, tranquilidade e bem-estar.
+            </p>
+
+            <ul class="line-features-list">
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Conforto & Bem-Estar:</strong> Spas, gastronomia acolhedora e ritmo relaxante sem esforço físico.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Segurança & Logística:</strong> Proximidade a centros de referência e seguro com cobertura gestacional.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Memórias Especiais:</strong> Opção de ensaio fotográfico profissional para eternizar a gestação.</span>
+              </li>
+            </ul>
+
+            <div class="line-card-footer">
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20planejar%20nossa%20Babymoon%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width: 100%;">
+                <span>Planejar Babymoon</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#destinos" class="line-secondary-link">
+                <span>Destinos recomendados</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. SOB MEDIDA -->
+        <article class="line-card">
+          <div class="line-card-media">
+            <img src="assets/images/colecao-experiencia-sob-medida.jpg" alt="Experiência de viagem sob medida e exclusiva - GTravel Hub" class="line-card-img" loading="lazy" width="800" height="533">
+            <div class="line-card-media-overlay"></div>
+            <div class="seal-badge-floating" title="Selo Oficial Sob Medida GTravel Hub">
+              <img src="assets/images/selo-exclusive.png" alt="Selo Sob Medida">
+            </div>
+          </div>
+
+          <div class="line-card-body">
+            <span class="line-target-audience">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Para quem deseja uma viagem única
+            </span>
+
+            <h3 class="line-card-title">Sob Medida</h3>
+
+            <p class="line-concept">
+              Uma experiência planejada de acordo com o <strong>perfil, desejos, ritmo e propósito</strong> de cada cliente.
+            </p>
+
+            <ul class="line-features-list">
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>100% Personalizado:</strong> Cada detalhe pensado exclusivamente para o seu jeito de viajar.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Curadoria Rara:</strong> Hospedagens boutique, passeios privativos e vivências singulares.</span>
+              </li>
+              <li class="feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Liberdade & Flexibilidade:</strong> Datas, conexões e itinerário desenhados em sintonia com seus sonhos.</span>
+              </li>
+            </ul>
+
+            <div class="line-card-footer">
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20quero%20desenhar%20uma%20viagem%20totalmente%20Sob%20Medida%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="btn btn-gold" style="width: 100%;">
+                <span>Desenhar Sob Medida</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="#planejar" class="line-secondary-link">
+                <span>Simular no formulário</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Frase de Encerramento da Seção -->
+      <div class="section-closing-quote">
+        <p>“Quatro linhas de viagem, uma mesma essência: curadoria, cuidado e experiências escolhidas para você.”</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUÇÕES PARA SUA VIAGEM (SERVIÇOS) ==================== -->
+  <section class="services-section" id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">SOLUÇÕES PARA SUA VIAGEM</span>
+        <h2 class="section-title">CADA DETALHE, CUIDADO COM EXCELÊNCIA</h2>
+        <p class="section-subtitle">
+          Da escolha do voo à seleção da hospedagem e das experiências, cuidamos dos principais detalhes da sua viagem para que você aproveite cada momento com mais praticidade e tranquilidade.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Passagens Aéreas -->
+        <div class="service-card">
+          <div class="service-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"></path></svg>
+          </div>
+          <h3 class="service-card-title">1. Passagens Aéreas</h3>
+          <p class="service-card-desc">Emissões nacionais e internacionais com pesquisa de opções, conexões, horários e condições que façam sentido para a sua viagem.</p>
+        </div>
+
+        <!-- 2. Hospedagem & Resorts -->
+        <div class="service-card">
+          <div class="service-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1"></path></svg>
+          </div>
+          <h3 class="service-card-title">2. Hospedagem & Resorts</h3>
+          <p class="service-card-desc">Curadoria de hotéis, resorts, pousadas e hospedagens selecionadas de acordo com o destino, perfil e estilo de cada viagem.</p>
+        </div>
+
+        <!-- 3. Cruzeiros -->
+        <div class="service-card">
+          <div class="service-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M2 20a6 6 0 0 0 6 0 6 6 0 0 1 6 0 6 6 0 0 0 6 0 6 6 0 0 1 2 0M4 16l2-8h12l2 8M12 4v4M8 6h8"></path></svg>
+          </div>
+          <h3 class="service-card-title">3. Cruzeiros</h3>
+          <p class="service-card-desc">Cruzeiros nacionais e internacionais cuidadosamente selecionados para diferentes estilos de viagem e experiências.</p>
+        </div>
+
+        <!-- 4. Seguro Viagem -->
+        <div class="service-card">
+          <div class="service-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+          </div>
+          <h3 class="service-card-title">4. Seguro Viagem</h3>
+          <p class="service-card-desc">Opções de assistência para viajar com mais tranquilidade, incluindo alternativas adequadas a diferentes perfis e necessidades.</p>
+        </div>
+
+        <!-- 5. Roteiros Personalizados -->
+        <div class="service-card">
+          <div class="service-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+          </div>
+          <h3 class="service-card-title">5. Roteiros Personalizados</h3>
+          <p class="service-card-desc">Planejamento sob medida, pensado de acordo com seus interesses, ritmo, orçamento e propósito da viagem.</p>
+        </div>
+
+        <!-- 6. Ingressos & Experiências -->
+        <div class="service-card">
+          <div class="service-icon-box" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle><line x1="12" y1="6" x2="12" y2="18" stroke-dasharray="2 2"></line></svg>
+          </div>
+          <h3 class="service-card-title">6. Ingressos & Experiências</h3>
+          <p class="service-card-desc">Ingressos, passeios e experiências selecionados para complementar o roteiro e tornar a viagem ainda mais especial.</p>
+        </div>
+      </div>
+
+      <!-- Nota de Posicionamento da Seção -->
+      <div class="services-footer-note">
+        <strong>Conceito GTravel:</strong> Não apenas vendemos cada serviço separadamente. Conectamos cada detalhe através da curadoria da viagem, oferecendo desde pacotes já selecionados até planejamento totalmente personalizado.
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DESTINOS EM DESTAQUE ==================== -->
+  <section class="destinations-section" id="destinos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">DESTINOS SELECIONADOS</span>
+        <h2 class="section-title">Destinos & Experiências com Curadoria</h2>
+        <p class="section-subtitle">
+          Destinos e experiências criteriosamente escolhidos pela GTravel Hub, reforçando nosso compromisso com conforto, segurança e memórias inesquecíveis.
+        </p>
+      </div>
+
+      <!-- Filtros Atualizados -->
+      <div class="destination-filters">
+        <button class="filter-btn active" data-filter="all">Todos os Destinos</button>
+        <button class="filter-btn" data-filter="brasil">Brasil & Serra</button>
+        <button class="filter-btn" data-filter="romance">Lua de Mel & Romance</button>
+        <button class="filter-btn" data-filter="internacional">Internacional & Europa</button>
+        <button class="filter-btn" data-filter="exoticos">Exóticos & Experiências</button>
+      </div>
+
+      <div class="destinations-grid">
+        <!-- 1. Jericoacoara & Rota das Emoções (Destaque Estratégico) -->
+        <div class="destination-card" data-category="brasil exoticos">
+          <img src="assets/images/destino-jericoacoara-rota-emocoes.jpg" alt="Jericoacoara e Rota das Emoções" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge ceara-highlight-badge">Destaque Ceará • Rota das Emoções</span>
+            <div class="destination-info">
+              <h3>Jericoacoara & Rota das Emoções</h3>
+              <p>Ceará, Piauí e Maranhão em uma expedição inesquecível de dunas, lagoas e ventos paradisíacos.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20explorar%20a%20experi%C3%AAncia%20em%20Jericoacoara%20e%20Rota%20das%20Emo%C3%A7%C3%B5es%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Experiência Aurora Boreal -->
+        <div class="destination-card" data-category="exoticos internacional">
+          <img src="assets/images/experiencia-aurora-boreal.jpg" alt="Experiência Aurora Boreal" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">Exóticos & Experiências</span>
+            <div class="destination-info">
+              <h3>Experiência Aurora Boreal</h3>
+              <p>Noruega e Finlândia em uma experiência única para contemplar um dos fenômenos mais fascinantes da natureza.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20tenho%20o%20sonho%20de%20viver%20a%20Experi%C3%AAncia%20Aurora%20Boreal%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Ilhas Maldivas -->
+        <div class="destination-card" data-category="romance internacional">
+          <img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=700&q=80" alt="Ilhas Maldivas" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">Honeymoon & Luxo</span>
+            <div class="destination-info">
+              <h3>Ilhas Maldivas</h3>
+              <p>O refúgio definitivo de romance: bangalôs sobre águas cristalinas e pôr do sol inigualável.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20explorar%20a%20experi%C3%AAncia%20nas%20Ilhas%20Maldivas%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Gramado & Serra Gaúcha -->
+        <div class="destination-card" data-category="brasil romance">
+          <img src="https://images.unsplash.com/photo-1668717342337-7185f43d60ea?auto=format&fit=crop&w=700&q=80" alt="Gramado e Serra Gaúcha" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">Brasil / Serra</span>
+            <div class="destination-info">
+              <h3>Gramado & Serra Gaúcha</h3>
+              <p>Clima europeu, alta gastronomia, vinícolas e aconchego o ano inteiro.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20explorar%20a%20experi%C3%AAncia%20em%20Gramado%20e%20Serra%20Ga%C3%BAcha%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Europa Clássica -->
+        <div class="destination-card" data-category="internacional romance">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=700&q=80" alt="Europa e Paris" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">Europa / Cultura</span>
+            <div class="destination-info">
+              <h3>Europa Clássica</h3>
+              <p>França, Itália, Suíça e Portugal com experiências privativas e passeios de trem cenográficos.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20explorar%20a%20experi%C3%AAncia%20na%20Europa%20Cl%C3%A1ssica%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Caribe Paradisíaco -->
+        <div class="destination-card" data-category="internacional romance">
+          <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=80" alt="Caribe" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">Caribe / All-Inclusive</span>
+            <div class="destination-info">
+              <h3>Caribe Paradisíaco</h3>
+              <p>Resorts de luxo pé na areia com mar azul turquesa, perfeitos para relaxar e comemorar.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20explorar%20a%20experi%C3%AAncia%20no%20Caribe%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Disney & Magia de Orlando -->
+        <div class="destination-card" data-category="internacional exoticos">
+          <img src="assets/images/destino-disney-orlando.jpg" alt="Disney e Parques de Orlando" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">EUA / Parques Temáticos</span>
+            <div class="destination-info">
+              <h3>Disney & Magia de Orlando</h3>
+              <p>Toda a magia dos parques temáticos em um planejamento completo com ingressos, traslados e hotéis selecionados.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20explorar%20a%20experi%C3%AAncia%20para%20Disney%20e%20Orlando%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Fernando de Noronha -->
+        <div class="destination-card" data-category="brasil romance exoticos">
+          <img src="assets/images/destino-fernando-noronha.jpg" alt="Fernando de Noronha" class="destination-img" loading="lazy" width="700" height="467">
+          <div class="destination-overlay">
+            <span class="destination-badge">Brasil / Paraíso Ecológico</span>
+            <div class="destination-info">
+              <h3>Fernando de Noronha</h3>
+              <p>O santuário mais exclusivo do Brasil com águas cristalinas, vida marinha deslumbrante e pousadas de charme.</p>
+              <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20explorar%20a%20experi%C3%AAncia%20em%20Fernando%20de%20Noronha%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="destination-cta-link">
+                <span>Explorar Experiência</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== POR QUE ESCOLHER A GTRAVEL HUB ==================== -->
+  <section class="why-section" id="diferenciais">
+    <div class="container">
+      <div class="why-grid">
+        <div class="why-content">
+          <span class="section-tag">CURADORIA QUE FAZ A DIFERENÇA</span>
+          <h2 class="section-title">POR QUE ESCOLHER A GTRAVEL HUB?</h2>
+          <p class="section-subtitle" style="margin-bottom: 30px;">
+            Mais do que vender viagens, selecionamos cada experiência com cuidado para que você encontre o destino, a hospedagem e as experiências que realmente combinam com o seu momento.
+          </p>
+
+          <div class="why-card-list">
+            <!-- 1. Curadoria Personalizada -->
+            <div class="why-item">
+              <div class="why-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <div>
+                <h4>Curadoria Personalizada</h4>
+                <p>Destinos e experiências selecionados de acordo com seu perfil, estilo de viagem e desejos.</p>
+              </div>
+            </div>
+
+            <!-- 2. Pacotes Selecionados -->
+            <div class="why-item">
+              <div class="why-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div>
+                <h4>Pacotes Selecionados</h4>
+                <p>Opções nacionais e internacionais cuidadosamente escolhidas para quem busca praticidade e uma viagem bem planejada.</p>
+              </div>
+            </div>
+
+            <!-- 3. Atendimento Humano -->
+            <div class="why-item">
+              <div class="why-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg>
+              </div>
+              <div>
+                <h4>Atendimento Humano</h4>
+                <p>Você fala com pessoas que acompanham sua viagem de perto, do planejamento ao retorno.</p>
+              </div>
+            </div>
+
+            <!-- 4. Experiências Sob Medida -->
+            <div class="why-item">
+              <div class="why-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <div>
+                <h4>Experiências Sob Medida</h4>
+                <p>Para quem deseja ir além do pacote: criamos roteiros personalizados para momentos especiais.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why-visual-wrapper">
+          <div class="why-visual-card">
+            <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?auto=format&fit=crop&w=1200&q=85" alt="Cristo Redentor e Rio de Janeiro - Destinos Inesquecíveis pelo Brasil" loading="lazy" width="900" height="600">
+            <div class="why-floating-badge">
+              <img src="assets/images/logo-icon.svg" alt="GTravel Hub Oficial">
+              <div>
+                <strong>Acompanhamento Dedicado</strong>
+                <span>Do planejamento ao seu retorno</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== NOSSA ESSÊNCIA: GERSIELE LIMA ==================== -->
+  <section class="about-section" id="sobre">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo-wrapper">
+          <div class="about-photo-frame">
+            <img src="assets/images/gersiele-lima.jpeg?v=2" alt="Gersiele Lima - Fundadora da GTravel Hub" class="about-photo" loading="lazy" width="800" height="1000">
+            <div class="founder-badge">
+              <strong>Gersiele Lima</strong>
+              <span>Fundadora | GTravel Hub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-text-content">
+          <span class="section-tag">NOSSA ESSÊNCIA</span>
+          <h2 class="section-title">
+            MAIS DO QUE UMA AGÊNCIA.<br>
+            <span>UMA PARCEIRA PARA SUAS MELHORES EXPERIÊNCIAS.</span>
+          </h2>
+          
+          <div class="about-story-text">
+            <p>
+              A GTravel Hub nasceu de uma paixão que me acompanha há anos: <strong>transformar o desejo de viajar em experiências que realmente façam sentido para cada pessoa.</strong>
+            </p>
+
+            <p>
+              Minha trajetória no turismo e na hotelaria me ensinou que uma viagem vai muito além de passagens, hospedagem e destinos. Ela envolve expectativa, planejamento, detalhes e, principalmente, o momento de vida de quem está viajando.
+            </p>
+
+            <p>
+              Ao longo da minha experiência profissional, tive a oportunidade de trabalhar com diferentes perfis de viajantes e entender que cada pessoa viaja por uma razão diferente: celebrar, descansar, reencontrar alguém, conhecer o mundo, viver uma lua de mel, realizar um sonho ou simplesmente se permitir uma pausa para se reencontrar.
+            </p>
+
+            <p>
+              Foi dessa visão que nasceu a <strong>GTravel Hub</strong>: uma agência criada para unir conhecimento, atendimento humano e curadoria.
+            </p>
+
+            <p>
+              Aqui, não queremos apenas apresentar opções. Queremos selecionar o que realmente combina com você, conectar cada detalhe e tornar o planejamento mais leve e seguro.
+            </p>
+
+            <p>
+              Seja através de um pacote cuidadosamente selecionado, de uma experiência especial como Honeymoon ou Babymoon, ou de uma viagem totalmente sob medida, cada escolha é feita com atenção ao seu perfil, ao seu momento e ao que você espera viver.
+            </p>
+
+            <div class="about-highlight-box">
+              <p>
+                “Porque, para nós, viajar não é apenas chegar a um destino. É tudo aquilo que você leva dele para a vida.”
+              </p>
+            </div>
+
+            <div class="about-signature-block">
+              <div>
+                <div class="founder-signature-name">Gersiele Lima</div>
+                <div class="founder-signature-role">Fundadora | GTravel Hub</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FORMULÁRIO QUALIFICADOR UNIVERSAL ==================== -->
+  <section class="planner-section" id="planejar">
+    <div class="container">
+      <div class="planner-card">
+        <div class="section-header" style="margin-bottom: 30px;">
+          <span class="section-tag">PLANEJE SUA PRÓXIMA EXPERIÊNCIA</span>
+          <h2 class="section-title" style="font-size: 2.2rem;">VAMOS TORNAR SUA VIAGEM REAL?</h2>
+          <p class="section-subtitle">
+            Conte-nos o que você está planejando. Nossa equipe irá entender seu perfil, seus desejos e o momento da viagem para indicar as melhores opções de pacotes cuidadosamente selecionados a experiências totalmente sob medida.
+          </p>
+        </div>
+
+        <form id="travelPlannerForm">
+          <div class="form-grid">
+            <!-- Nome -->
+            <div class="form-group">
+              <label for="plannerName">Seu Nome Completo *</label>
+              <input type="text" id="plannerName" class="form-input" placeholder="Ex.: Ana Silva" required>
+            </div>
+
+            <!-- WhatsApp com DDD -->
+            <div class="form-group">
+              <label for="plannerPhone">WhatsApp / Telefone com DDD *</label>
+              <input type="tel" id="plannerPhone" class="form-input" placeholder="(88) 99999-9999" maxlength="15" required>
+              <div class="form-badge-security">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Contato seguro • Sem spam</span>
+              </div>
+            </div>
+
+            <!-- O que você procura? (Menu Cascata) -->
+            <div class="form-group">
+              <label for="plannerService">O que você procura? *</label>
+              <select id="plannerService" class="form-select" required>
+                <option value="Pacote de Viagem" selected>Pacote de Viagem</option>
+                <option value="Honeymoon (Lua de Mel)">Honeymoon (Lua de Mel)</option>
+                <option value="Babymoon (Gestantes)">Babymoon (Gestantes)</option>
+                <option value="Viagem Sob Medida">Viagem Sob Medida</option>
+                <option value="Passagens Aéreas">Passagens Aéreas</option>
+                <option value="Hospedagem & Resorts">Hospedagem & Resorts</option>
+                <option value="Cruzeiro Marítimo">Cruzeiro Marítimo</option>
+                <option value="Seguro Viagem">Seguro Viagem</option>
+                <option value="Ingressos & Experiências">Ingressos & Experiências</option>
+                <option value="Ainda não sei — quero uma orientação">Ainda não sei — quero uma orientação</option>
+              </select>
+            </div>
+
+            <!-- Destino ou Região de Interesse -->
+            <div class="form-group">
+              <label for="plannerDestination">Destino ou região de interesse</label>
+              <input type="text" id="plannerDestination" class="form-input" placeholder="Ex.: Maldivas, Europa, Jericoacoara, Caribe…">
+            </div>
+
+            <!-- Número de Viajantes (Menu Cascata) -->
+            <div class="form-group">
+              <label for="plannerTravelers">Número de viajantes</label>
+              <select id="plannerTravelers" class="form-select">
+                <option value="1 pessoa (Viagem Solo)">1 pessoa (Viagem Solo)</option>
+                <option value="2 pessoas (Casal)" selected>2 pessoas (Casal)</option>
+                <option value="3 a 4 pessoas (Família / Amigos)">3 a 4 pessoas (Família / Amigos)</option>
+                <option value="5 ou mais pessoas (Grupo)">5 ou mais pessoas (Grupo)</option>
+                <option value="Outro (definir com a consultora)">Outro (definir com a consultora)</option>
+              </select>
+            </div>
+
+            <!-- Quando pretende viajar? (Menu Cascata) -->
+            <div class="form-group">
+              <label for="plannerDate">Quando pretende viajar?</label>
+              <select id="plannerDate" class="form-select">
+                <option value="Próximo mês">Próximo mês</option>
+                <option value="Em até 3 meses" selected>Em até 3 meses</option>
+                <option value="Próximo semestre">Próximo semestre</option>
+                <option value="Fim de ano / Férias">Fim de ano / Férias</option>
+                <option value="Ainda não defini">Ainda não defini</option>
+              </select>
+            </div>
+
+            <!-- O INVESTIMENTO PARA O SEU SONHO (Menu Cascata) -->
+            <div class="form-group full-width">
+              <label for="plannerInvestment">Faixa de investimento estimada para essa experiência</label>
+              <select id="plannerInvestment" class="form-select">
+                <option value="Até R$ 3.000">Até R$ 3.000</option>
+                <option value="R$ 3.000 a R$ 5.000">R$ 3.000 a R$ 5.000</option>
+                <option value="R$ 5.000 a R$ 10.000" selected>R$ 5.000 a R$ 10.000</option>
+                <option value="R$ 10.000 a R$ 20.000">R$ 10.000 a R$ 20.000</option>
+                <option value="Acima de R$ 20.000">Acima de R$ 20.000</option>
+                <option value="Ainda estou descobrindo o que é possível para mim">Ainda estou descobrindo o que é possível para mim</option>
+              </select>
+              <span style="font-size: 0.78rem; color: var(--color-text-muted-v2); margin-top: 6px; display: block; line-height: 1.4;">
+                Essa informação nos ajuda a selecionar opções alinhadas às suas expectativas e ao momento da sua viagem.
+              </span>
+            </div>
+
+            <!-- Preferências & Detalhes -->
+            <div class="form-group full-width">
+              <label for="plannerDetails">Preferências & detalhes da viagem</label>
+              <textarea id="plannerDetails" class="form-textarea" rows="3" placeholder="Conte-nos o que é importante para você: tipo de hospedagem, experiências que gostaria de viver, comemoração especial, necessidades específicas, estilo de viagem ou qualquer outro detalhe."></textarea>
+            </div>
+
+            <!-- Botão de Envio -->
+            <div class="form-group full-width" style="margin-top: 10px;">
+              <button type="submit" class="btn btn-gold planner-submit-btn">
+                <span>FALAR COM A GTRAVEL</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              
+              <div class="form-footer-guarantee">
+                <span>• Atendimento humano</span>
+                <span>• Curadoria personalizada</span>
+                <span>• Sem compromisso</span>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PERGUNTAS FREQUENTES (FAQ) ==================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">ESCLARECENDO DÚVIDAS</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+        <p class="section-subtitle">
+          Tudo o que você precisa saber sobre nosso atendimento, pacotes e curadoria personalizada.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <!-- Item 1 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-1">
+            <span>Como funciona a curadoria e atendimento da GTravel Hub?</span>
+            <svg class="faq-icon-svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer" id="faq-ans-1">
+            Entendemos seu estilo de viagem, datas desejadas, orçamento e expectativas. A partir disso, apresentamos opções — seja um pacote selecionado com excelente custo-benefício ou um planejamento sob medida desenhado do zero — com acompanhamento humano antes, durante e após a viagem.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-2">
+            <span>A GTravel Hub também vende pacotes prontos ou apenas roteiros sob medida?</span>
+            <svg class="faq-icon-svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer" id="faq-ans-2">
+            Trabalhamos com os dois formatos! Temos pacotes prontos cuidadosamente selecionados para quem busca praticidade, segurança e excelente logística, além de experiências totalmente sob medida para momentos únicos e celebrações especiais.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-3">
+            <span>Qual a diferença entre a Linha Babymoon e uma viagem comum?</span>
+            <svg class="faq-icon-svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer" id="faq-ans-3">
+            A Linha Babymoon foi desenhada com atenção ao momento da gestação: priorizamos destinos com logística suave, hotéis confortáveis com spas, seguro viagem com cobertura obstétrica e proximidade a centros de referência para que o casal descanse com total paz de espírito.
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false" aria-controls="faq-ans-4">
+            <span>Como funciona o suporte durante a viagem em caso de imprevistos?</span>
+            <svg class="faq-icon-svg" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer" id="faq-ans-4">
+            <p style="margin-bottom: 12px;"><strong>Você não estará sozinho depois do embarque.</strong></p>
+            <p style="margin-bottom: 12px;">Durante a sua viagem, você conta com um canal direto de atendimento com nossa equipe para receber orientação e suporte diante de eventuais imprevistos.</p>
+            <p style="margin-bottom: 12px;">Em situações como alterações de voo, remarcações ou outras intercorrências operacionais, acompanhamos cada caso e orientamos você sobre os próximos passos, buscando as melhores alternativas junto aos fornecedores responsáveis.</p>
+            <p style="margin-bottom: 12px;">E, quando a situação exigir uma análise especializada, contamos também com suporte jurídico de um escritório parceiro, oferecendo uma camada adicional de orientação e segurança ao viajante.</p>
+            <p><em>Porque uma experiência bem planejada também inclui saber com quem contar quando algo sai do planejado.</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CHAMADA FINAL ==================== -->
+  <section class="cta-final-section">
+    <div class="container">
+      <div class="cta-final-box">
+        <img src="assets/images/gersiele-lima.jpeg?v=2" alt="Gersiele Lima" class="cta-circle-avatar" loading="lazy" width="80" height="80">
+        <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 16px; line-height: 1.3;">
+          SUA PRÓXIMA<br>GRANDE EXPERIÊNCIA<br><span>COMEÇA AQUI.</span>
+        </h2>
+        <p style="color: var(--color-gold); font-size: 1.25rem; margin-bottom: 18px; font-weight: 600; font-family: var(--font-display); letter-spacing: 0.5px;">
+          Olá, eu sou a Gê!
+        </p>
+        <div style="color: var(--color-text-body); max-width: 620px; margin: 0 auto 30px; font-size: 0.98rem; line-height: 1.75;">
+          <p style="margin-bottom: 14px;">
+            Eu acredito que cada viagem começa com uma vontade de viver algo especial.
+          </p>
+          <p style="margin-bottom: 14px;">
+            Por isso, cuido de cada planejamento de forma personalizada, com curadoria, atenção aos detalhes e um olhar genuíno para aquilo que você deseja viver.
+          </p>
+          <p style="color: var(--color-white); font-weight: 600; font-size: 1.05rem;">
+            Vamos tirar esse sonho do papel?
+          </p>
+        </div>
+        <a href="#planejar" class="btn btn-gold" style="font-size: 1.05rem; padding: 16px 36px;">
+          <span>Iniciar meu planejamento →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RODAPÉ OFICIAL ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Coluna 1: Marca & Resumo -->
+        <div class="footer-brand">
+          <img src="assets/images/logo-gtravelhub-transparent.png" alt="GTRAVEL HUB" style="max-height: 58px; margin-bottom: 12px;">
+          <p>
+            <strong>Curadoria de Viagens • O mundo mais perto de você.</strong><br>
+            Pacotes selecionados e experiências sob medida para tornar cada momento inesquecível.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://instagram.com/gtravelhuboficial" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram da GTravel Hub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://wa.me/5588997236929" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp da GTravel Hub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.071.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.419-.101.824z"/></svg>
+            </a>
+            <a href="mailto:contato@gtravelhub.com" class="social-btn" aria-label="E-mail de Contato">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação -->
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <div class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#colecoes">Coleções de Viagem</a>
+            <a href="#servicos">Soluções Completas</a>
+            <a href="#destinos">Destinos Curados</a>
+            <a href="#diferenciais">Por Que a GTravel Hub</a>
+            <a href="#sobre">Nossa Essência</a>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Coleções -->
+        <div class="footer-col">
+          <h4>Coleções</h4>
+          <div class="footer-links">
+            <a href="#colecoes">Pacotes de Viagem</a>
+            <a href="#colecoes">Honeymoon (Lua de Mel)</a>
+            <a href="#colecoes">Babymoon (Gestantes)</a>
+            <a href="#colecoes">Viagens Sob Medida</a>
+            <a href="#servicos">Cruzeiros & Resorts</a>
+            <a href="#" class="open-privacy-modal">Política de Privacidade</a>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Contatos Oficiais -->
+        <div class="footer-col">
+          <h4>Atendimento Oficial</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.071.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.419-.101.824z"/></svg>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--color-gold); display: block;">WhatsApp</span>
+                <a href="https://wa.me/5588997236929" target="_blank" rel="noopener noreferrer" style="color: var(--color-white); font-weight: 600;">88 99723-6929</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--color-gold); display: block;">Instagram Oficial</span>
+                <a href="https://instagram.com/gtravelhuboficial" target="_blank" rel="noopener noreferrer" style="color: var(--color-white); font-weight: 600;">@gtravelhuboficial</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <div>
+                <span style="font-size: 0.75rem; color: var(--color-gold); display: block;">E-mail</span>
+                <a href="mailto:contato@gtravelhub.com" style="color: var(--color-white); font-weight: 600;">contato@gtravelhub.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra Inferior de Direitos & Cadastur / CNPJ -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 GTravel Hub por Gersiele Lima. Todos os direitos reservados.
+        </div>
+
+        <div class="footer-badges">
+          <div class="cadastur-badge">
+            <span>CADASTUR:</span>
+            <strong>39481859000103</strong>
+          </div>
+          <div class="cadastur-badge">
+            <span>CNPJ:</span>
+            <strong>39.481.859/0001-03</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== BOTÃO FLUTUANTE DE WHATSAPP ==================== -->
+  <div class="whatsapp-floating">
+    <div class="whatsapp-tooltip">
+      Fale com nossa Consultora
+    </div>
+    <a href="https://wa.me/5588997236929?text=Ol%C3%A1%2C%20gostaria%20de%20um%20atendimento%20exclusivo%20com%20a%20GTravel%20Hub!" target="_blank" rel="noopener noreferrer" class="whatsapp-float-btn" aria-label="Abrir conversa no WhatsApp">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.071.376-.043.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.419-.101.824z"/></svg>
+    </a>
+  </div>
+
+  <!-- ==================== MODAL DE POLÍTICA DE PRIVACIDADE ==================== -->
+  <div class="modal-overlay" id="privacyModal">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="closePrivacyModal" aria-label="Fechar modal">&times;</button>
+      <h3 class="modal-title">Política de Privacidade</h3>
+      <div class="modal-body">
+        <p>A <strong>GTravel Hub</strong> (CNPJ 39.481.859/0001-03, Cadastur 39481859000103) preza pela total segurança, confidencialidade e proteção dos dados pessoais de seus clientes e viajantes, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+        
+        <h4>1. Coleta e Uso das Informações</h4>
+        <p>Os dados fornecidos no formulário (nome, WhatsApp, preferências e investimento) são utilizados exclusivamente para fins de atendimento consultivo, orçamentos e reservas de serviços turísticos contratados.</p>
+
+        <h4>2. Compartilhamento Seguro</h4>
+        <p>Compartilhamos dados exclusivamente com os fornecedores e parceiros necessários para a execução da viagem (companhias aéreas, redes hoteleiras, seguradoras e operadoras de turismo credenciadas).</p>
+
+        <h4>3. Seus Direitos</h4>
+        <p>Você pode a qualquer momento solicitar a atualização ou remoção dos seus dados cadastrais através do nosso e-mail oficial: <strong>contato@gtravelhub.com</strong>.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Principal V3 -->
+  <script src="assets/js/main-v3.js"></script>
+</body>
+</html>
