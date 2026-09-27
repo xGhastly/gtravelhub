@@ -353,3 +353,23 @@
     gap: 20px !important;
   }
 }
+
+/* Barra de Destaques / Credenciais - Garantia Anti-Truncamento Definitiva */
+.hero-trust-bar {
+  max-width: 1060px !important;
+}
+
+.trust-item {
+  overflow: visible !important;
+}
+
+.trust-text {
+  overflow: visible !important;
+}
+
+.trust-text strong {
+  white-space: normal !important;
+  text-overflow: clip !important;
+  overflow: visible !important;
+  word-break: normal !important;
+}
